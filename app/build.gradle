@@ -48,7 +48,7 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
 //    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.6.0'
 
-    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+//    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
     implementation(name:'video-compressor',ext:'aar')
     implementation(name:'video-effect',ext:'aar')
     implementation(name:'video-record',ext:'aar')
