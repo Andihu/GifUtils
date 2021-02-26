@@ -1,4 +1,4 @@
-package com.h.gifutils;
+package com.h.gifutils.ui;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -6,10 +6,13 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.view.WindowInsets;
+import android.view.WindowInsetsController;
 import android.view.WindowManager;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.ViewCompat;
 
 /**
  * Copyright (C), 2015-2021
@@ -19,7 +22,7 @@ import androidx.appcompat.app.AppCompatActivity;
  * History:
  * <author> <time> <version> <desc>
  */
- abstract class BaseActivity extends AppCompatActivity {
+abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,9 +32,15 @@ import androidx.appcompat.app.AppCompatActivity;
             decorView.setSystemUiVisibility(decorView.getSystemUiVisibility() | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         }
         setContentView(getLayout());
+        initView();
+        setListeners();
     }
 
     public abstract int getLayout();
+
+    public abstract void initView();
+
+    public abstract void setListeners();
 
     public void makeStatusBarTransparent(Activity activity) {
         Window window = activity.getWindow();

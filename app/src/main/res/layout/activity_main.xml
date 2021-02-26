@@ -7,7 +7,7 @@
     android:background="@drawable/back_ground"
     android:elevation="10dp"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
     <TextView
         android:layout_width="match_parent"
@@ -200,7 +200,6 @@
                 android:textSize="12sp"
                 android:text="将多个Gif图合并为同一个gif图"
                 android:gravity="center"
-                android:background="@drawable/marge_gif_text_bg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
